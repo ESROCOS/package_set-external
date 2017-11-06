@@ -1,3 +1,7 @@
+name: esrocos.external
+
+version_control:
+
  - external/opencv:
           type: archive
           url: http://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
