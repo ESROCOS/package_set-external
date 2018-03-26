@@ -2,7 +2,7 @@ name: esrocos.external
 
 version_control:
 
- - external/opencv:
+ - external/static_opencv:
           type: archive
           url: https://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/3.3.0/opencv-3.3.0.zip
           update_cached_file: false
