@@ -2,3 +2,7 @@ cmake_package "external/static_opencv" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
   pkg.define("BUILD_SHARED_LIBS","OFF")
 end
+
+cmake_package "external/omplapp" do |pkg|
+  pkg.define("CMAKE_BUILD_TYPE","Release")
+end
