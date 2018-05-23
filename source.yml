@@ -8,5 +8,8 @@ version_control:
           update_cached_file: false
           archive_dir: opencv-3.3.0
           
+ - external/ompl:
+          github: ompl/ompl
+          
  - external/omplapp:
           github: ompl/omplapp

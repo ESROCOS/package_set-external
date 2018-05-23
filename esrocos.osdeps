@@ -1,0 +1,4 @@
+
+external/omplapp:
+    ubuntu:
+        default: libfcl-dev 
