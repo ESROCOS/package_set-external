@@ -15,3 +15,6 @@ version_control:
           
  - external/omplapp/ompl:
           github: ompl/ompl
+          
+ - external/dart:
+          github: dartsim/dart

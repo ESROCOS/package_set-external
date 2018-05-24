@@ -12,3 +12,7 @@ end
 cmake_package "external/omplapp/ompl" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
 end
+
+cmake_package "external/dart" do |pkg|
+  pkg.define("CMAKE_BUILD_TYPE","Release")
+end
