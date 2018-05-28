@@ -16,3 +16,7 @@ end
 cmake_package "external/dart" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
 end
+
+cmake_package "tools/RoboticArm" do |pkg|
+  pkg.define("CMAKE_BUILD_TYPE","Debug")
+end

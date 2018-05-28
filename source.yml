@@ -18,3 +18,8 @@ version_control:
           
  - external/dart:
           github: dartsim/dart
+          
+ - tools/RoboticArm:
+          spass-git: tools-RoboticArm
+  
+         
