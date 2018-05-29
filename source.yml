@@ -20,6 +20,6 @@ version_control:
           github: dartsim/dart
           
  - tools/RoboticArm:
-          spass-git: tools-RoboticArm
+          spassgit: esrocos/tools-RoboticArm
   
          
