@@ -8,16 +8,14 @@ version_control:
           update_cached_file: false
           archive_dir: opencv-3.3.0
           
-
+ - external/omplapp/ompl:
+          github: ompl/ompl
           
  - external/omplapp:
           github: ompl/omplapp
           
- - external/omplapp/ompl:
-          github: ompl/ompl
-          
  - external/dart:
-          github: dartsim/dart
+          spass-git: esrocos/dart_library
           
  - tools/RoboticArm:
           spassgit: esrocos/tools-RoboticArm
