@@ -15,7 +15,7 @@ version_control:
           github: ompl/omplapp
           
  - external/dart:
-          spass-git: esrocos/dart_library
+          spassgit: esrocos/dart_library
           
  - tools/RoboticArm:
           spassgit: esrocos/tools-RoboticArm
