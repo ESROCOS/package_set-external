@@ -3,7 +3,7 @@ cmake_package "external/static_opencv" do |pkg|
   pkg.define("BUILD_SHARED_LIBS","OFF")
 end
 
-cmake_package "external/omplapp/ompl" do |pkg|
+cmake_package "external/ompl" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
 end
 

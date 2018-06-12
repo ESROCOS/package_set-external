@@ -8,7 +8,7 @@ version_control:
           update_cached_file: false
           archive_dir: opencv-3.3.0
           
- - external/omplapp/ompl:
+ - external/ompl:
           github: ompl/ompl
           
  - external/omplapp:
@@ -19,5 +19,8 @@ version_control:
           
  - tools/RoboticArm:
           spassgit: esrocos/tools-RoboticArm
-  
+ 
+ - bundles/u5_control:
+          spassgit: esrocos/bundles-u5_control 
+          branch: autoproj
          
