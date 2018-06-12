@@ -13,6 +13,8 @@ end
 
 cmake_package "external/dart" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
+  # CMAKE_PREFIX_PATH set by autoproj interfers with building DART; use default (empty)
+  pkg.define("CMAKE_PREFIX_PATH","")
 end
 
 cmake_package "tools/RoboticArm" do |pkg|
