@@ -3,22 +3,49 @@ cmake_package "external/static_opencv" do |pkg|
   pkg.define("BUILD_SHARED_LIBS","OFF")
 end
 
-cmake_package "external/ompl" do |pkg|
+cmake_package "control/ompl" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
   # CMAKE_PREFIX_PATH set by autoproj interfers with building OMPL; use default (empty)
   pkg.define("CMAKE_PREFIX_PATH","")
+  # Prevent the ompl-CMakeLists from spawning a browser to register...
+  pkg.define("OMPL_REGISTRATION","Off")
 end
 
-cmake_package "external/omplapp" do |pkg|
+cmake_package "control/omplapp" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
   # CMAKE_PREFIX_PATH set by autoproj interfers with building OMPL; use default (empty)
   pkg.define("CMAKE_PREFIX_PATH","")
+  # Prevent the ompl-CMakeLists from spawning a browser to register...
+  pkg.define("OMPL_REGISTRATION","Off")
+  # Set the ROS_DISTRO to find the octomap library
+  pkg.env_set("ROS_DISTRO", "kinetic")
+  
+  # Add dependencies
+  pkg.depends_on "control/ompl"
+  pkg.depends_on "libfcl-0.5-dev"
+  
+  # For building, omplapp assumes that ompl is a subdirectory; create symbolic link at configure step
+  def pkg.configure
+    ompldir = File.join(Autobuild.srcdir, 'control', 'ompl')
+    symdir  = File.join(Autobuild.srcdir, 'control', 'omplapp', 'ompl')
+    system("ln -sf #{ompldir} #{symdir}")
+
+    # Normal configure
+    super
+  end
+  
 end
 
 cmake_package "external/dart" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
   # CMAKE_PREFIX_PATH set by autoproj interfers with building DART; use default (empty)
   pkg.define("CMAKE_PREFIX_PATH","")
+  # Add dependencies
+  pkg.depends_on "control/ompl"
+  pkg.depends_on "libfcl-0.5-dev"
+  pkg.depends_on "clang-format"
+  pkg.depends_on "libnlopt-dev"
+  pkg.depends_on "coinor-libipopt-dev"
 end
 
 cmake_package "tools/RoboticArm" do |pkg|

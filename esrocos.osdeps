@@ -1,5 +1,15 @@
-
-external/dart:
+clang-format:
     ubuntu:
-        default: [libfcl-0.5-dev, clang-format, coinor-libipopt-dev, libnlopt-dev]
+        default: clang-format
  
+libnlopt-dev:
+    ubuntu:
+        default: libnlopt-dev
+ 
+coinor-libipopt-dev:
+    ubuntu:
+        default: coinor-libipopt-dev
+ 
+libfcl-0.5-dev:
+    ubuntu:
+        default: libfcl-0.5-dev
