@@ -23,6 +23,7 @@ cmake_package "control/omplapp" do |pkg|
   # Add dependencies
   pkg.depends_on "control/ompl"
   pkg.depends_on "libfcl-0.5-dev"
+  pkg.depends_on "libccd-dev"
   
   # For building, omplapp assumes that ompl is a subdirectory; create symbolic link at configure step
   def pkg.configure
@@ -46,10 +47,13 @@ cmake_package "external/dart" do |pkg|
   pkg.depends_on "clang-format"
   pkg.depends_on "libnlopt-dev"
   pkg.depends_on "coinor-libipopt-dev"
+  pkg.depends_on "libxmu-dev"
 end
 
 cmake_package "tools/RoboticArm" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
+  pkg.depends_on "external/dart"
+  pkg.depends_on "control/omplapp"
 end
 
 cmake_package "bundles/u5_control" do |pkg|

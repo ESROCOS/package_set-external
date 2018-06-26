@@ -12,4 +12,12 @@ coinor-libipopt-dev:
  
 libfcl-0.5-dev:
     ubuntu: libfcl-0.5-dev
-    debian: ignore
+    debian: libfcl-dev
+    
+libccd-dev:
+    ubuntu: libccd-dev
+    debian: libccd-dev
+    
+libxmu-dev:
+    ubuntu,debian:
+        libxmu-dev
