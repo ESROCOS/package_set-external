@@ -13,3 +13,5 @@ coinor-libipopt-dev:
 libfcl-0.5-dev:
     ubuntu:
         default: libfcl-0.5-dev
+	debian:
+		default: 
