@@ -1,21 +1,15 @@
-clang-format:
-    ubuntu:
-        default: clang-format
-    debian:
-        default: clang-format 
+clang-format: 
+    ubuntu,debian: 
+        clang-format
+
 libnlopt-dev:
-    ubuntu:
-        default: libnlopt-dev
-    debian:
-        default: libnlopt-dev        
+    ubuntu,debian:
+        libnlopt-dev  
  
 coinor-libipopt-dev:
-    ubuntu:
-        default: coinor-libipopt-dev
-    debian:
-        default: coinor-libipopt-dev
+    ubuntu,debian:
+        coinor-libipopt-dev
  
 libfcl-0.5-dev:
-    ubuntu:
-        libfcl-0.5-dev
-    debian:
+    ubuntu: libfcl-0.5-dev
+    debian: ignore
