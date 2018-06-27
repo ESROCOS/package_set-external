@@ -8,7 +8,10 @@ cmake_package "control/ompl" do |pkg|
   # CMAKE_PREFIX_PATH set by autoproj interfers with building OMPL; use default (empty)
   pkg.define("CMAKE_PREFIX_PATH","")
   # Prevent the ompl-CMakeLists from spawning a browser to register...
-  pkg.define("OMPL_REGISTRATION","Off")
+  pkg.define("OMPL_REGISTRATION","OFF")
+  # Don't build OMPL tests or demos
+  pkg.define("OMPL_BUILD_TESTS","OFF")
+  pkg.define("OMPL_BUILD_DEMOS","OFF")
 end
 
 cmake_package "control/omplapp" do |pkg|
@@ -19,6 +22,9 @@ cmake_package "control/omplapp" do |pkg|
   pkg.define("OMPL_REGISTRATION","Off")
   # Set the ROS_DISTRO to find the octomap library
   pkg.env_set("ROS_DISTRO", "kinetic")
+  # Don't build OMPL tests or demos
+  pkg.define("OMPL_BUILD_TESTS","OFF")
+  pkg.define("OMPL_BUILD_DEMOS","OFF")
   
   # Add dependencies
   pkg.depends_on "control/ompl"
