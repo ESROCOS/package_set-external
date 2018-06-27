@@ -21,3 +21,9 @@ libccd-dev:
 libxmu-dev:
     ubuntu,debian:
         libxmu-dev
+
+protobuf-compiler:
+    ubuntu,debian: protobuf-compiler
+    
+gazebo7:
+    ubuntu,debian: gazebo7
