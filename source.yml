@@ -22,5 +22,5 @@ version_control:
  
  - bundles/ur5_control:
           spassgit: esrocos/bundles-ur5_control 
-          branch: autoproj
+          branch: master
          
