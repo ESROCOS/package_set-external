@@ -17,10 +17,13 @@ version_control:
  - external/dart:
           spassgit: esrocos/dart_library
           
- - tools/RoboticArm:
-          spassgit: esrocos/tools-RoboticArm
+ - tools/robotic_arm:
+          spassgit: esrocos/tools-robotic_arm
  
- - bundles/u5_control:
-          spassgit: esrocos/bundles-u5_control 
-          branch: autoproj
-         
+ - bundles/ur5_control:
+          spassgit: esrocos/bundles-ur5_control 
+          branch: master
+
+ - bundles/orbital_test:
+          spassgit: esrocos/bundles-orbital_test
+          branch: master

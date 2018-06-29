@@ -54,12 +54,14 @@ cmake_package "external/dart" do |pkg|
   pkg.depends_on "libxmu-dev"
 end
 
-cmake_package "tools/RoboticArm" do |pkg|
+cmake_package "tools/robotic_arm" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
   pkg.depends_on "external/dart"
   pkg.depends_on "control/omplapp"
 end
 
-cmake_package "bundles/u5_control" do |pkg|
+cmake_package "bundles/ur5_control" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
 end
+
+cmake_package "bundles/orbital_test"
