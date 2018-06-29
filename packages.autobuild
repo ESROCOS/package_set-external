@@ -65,3 +65,5 @@ end
 cmake_package "bundles/ur5_control" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
 end
+
+cmake_package "bundles/orbital_test"
