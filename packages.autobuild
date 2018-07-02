@@ -1,3 +1,5 @@
+require_relative 'esrocos_autoproj'
+
 cmake_package "external/static_opencv" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
   pkg.define("BUILD_SHARED_LIBS","OFF")
@@ -58,6 +60,11 @@ cmake_package "tools/robotic_arm" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
   pkg.depends_on "external/dart"
   pkg.depends_on "control/omplapp"
+  
+  # Enable build for RTEMS (only ur_driver_cpp is built for RTEMS)
+  if(ENV.has_key?('ESROCOS_RTEMS_TARGET'))
+    Esrocos.build_rtems_gailser(pkg, ENV['ESROCOS_RTEMS_TARGET'])
+  end
 end
 
 cmake_package "bundles/ur5_control" do |pkg|
