@@ -10,11 +10,9 @@ version_control:
           
  - control/ompl:
           github: ompl/ompl
-          tag: 1.2.3
           
  - control/omplapp:
           github: ompl/omplapp
-          tag: 1.3.1
           
  - external/dart:
           spassgit: esrocos/dart_library
