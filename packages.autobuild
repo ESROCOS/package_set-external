@@ -1,3 +1,5 @@
+require_relative 'esrocos_autoproj'
+
 cmake_package "external/static_opencv" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
   pkg.define("BUILD_SHARED_LIBS","OFF")
@@ -20,8 +22,6 @@ cmake_package "control/omplapp" do |pkg|
   pkg.define("CMAKE_PREFIX_PATH","")
   # Prevent the ompl-CMakeLists from spawning a browser to register...
   pkg.define("OMPL_REGISTRATION","Off")
-  # Set the ROS_DISTRO to find the octomap library
-  pkg.env_set("ROS_DISTRO", "kinetic")
   # Don't build OMPL tests or demos
   pkg.define("OMPL_BUILD_TESTS","OFF")
   pkg.define("OMPL_BUILD_DEMOS","OFF")
@@ -60,10 +60,16 @@ cmake_package "tools/robotic_arm" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
   pkg.depends_on "external/dart"
   pkg.depends_on "control/omplapp"
+  
+  # Enable build for RTEMS (only ur_driver_cpp is built for RTEMS)
+  if(ENV.has_key?('ESROCOS_RTEMS_TARGET'))
+    Esrocos.build_rtems_gailser(pkg, ENV['ESROCOS_RTEMS_TARGET'])
+  end
 end
 
 cmake_package "bundles/ur5_control" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
+  Esrocos.set_taste_package(pkg)
 end
 
-cmake_package "bundles/orbital_test"
+import_package "bundles/orbital_test"
