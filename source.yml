@@ -17,6 +17,12 @@ version_control:
  - external/dart:
           spassgit: esrocos/dart_library
           
+# - external/luarocks
+#          type: archive
+#          url: http://luarocks.github.io/luarocks/releases/luarocks-2.4.4.tar.gz
+#          update_cached_file: false
+#          archive_dir: luarocks-2.4.4
+          
  - tools/robotic_arm:
           spassgit: esrocos/tools-robotic_arm
  

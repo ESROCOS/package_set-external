@@ -73,3 +73,11 @@ cmake_package "bundles/ur5_control" do |pkg|
 end
 
 import_package "bundles/orbital_test"
+
+#import_package "external/luarocks" do |pkg|
+  # Add dependencies
+#  pkg.depends_on "lua5.2"
+#  system("./configure")
+  
+#end
+
