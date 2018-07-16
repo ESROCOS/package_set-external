@@ -72,7 +72,6 @@ cmake_package "bundles/ur5_control" do |pkg|
   Esrocos.set_taste_package(pkg)
 end
 
-import_package "bundles/orbital_test"
 
 #import_package "external/luarocks" do |pkg|
   # Add dependencies
@@ -81,3 +80,7 @@ import_package "bundles/orbital_test"
   
 #end
 
+cmake_package "bundles/orbital_test" do |pkg|
+  pkg.define("CMAKE_BUILD_TYPE","Debug")
+  Esrocos.set_taste_package(pkg)
+end
