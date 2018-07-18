@@ -33,6 +33,10 @@ version_control:
  - bundles/cmm_control:
           spassgit: esrocos/bundles-cmm_control 
           branch: master
+          
+ - bundles/cmm_control:
+          spassgit: esrocos/bundles-cmm_control_simple 
+          branch: master
 
  - bundles/orbital_test:
           spassgit: esrocos/bundles-orbital_test

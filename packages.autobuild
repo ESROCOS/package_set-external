@@ -88,3 +88,8 @@ cmake_package "bundles/cmm_control" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Debug")
   Esrocos.set_taste_package(pkg)
 end
+
+cmake_package "bundles/cmm_control_simple" do |pkg|
+  pkg.define("CMAKE_BUILD_TYPE","Debug")
+  Esrocos.set_taste_package(pkg)
+end
