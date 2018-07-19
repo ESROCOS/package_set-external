@@ -34,7 +34,7 @@ version_control:
           spassgit: esrocos/bundles-cmm_control 
           branch: master
           
- - bundles/cmm_control:
+ - bundles/cmm_control_simple:
           spassgit: esrocos/bundles-cmm_control_simple 
           branch: master
 
