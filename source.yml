@@ -10,6 +10,7 @@ version_control:
           
  - control/ompl:
           github: ompl/ompl
+          commit: 184884abfb0e747383671e8390ca2cfa6b75da58
           
  - control/omplapp:
           github: ompl/omplapp
