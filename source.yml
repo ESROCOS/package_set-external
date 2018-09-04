@@ -8,8 +8,8 @@ version_control:
           update_cached_file: false
           archive_dir: opencv-3.3.0
           
- - external/opencv2-4:
+ - external/opencv2-4-13:
           type: archive
-          url: https://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.9/opencv-2.4.9.zip
+          url: https://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.13/opencv-2.4.13.zip
           update_cached_file: false
-          archive_dir: opencv-2.4.9
+          archive_dir: opencv-2.4.13
