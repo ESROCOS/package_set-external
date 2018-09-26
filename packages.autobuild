@@ -110,6 +110,10 @@ import_package "control/bip/monitor_joints"
 
 import_package "control/bip/watchdog_timeout"
 
+import_package "tools/kul/cmm_gen"
+
+
+
 
 
 

@@ -52,4 +52,8 @@ version_control:
  - tools/kul/gen_cpp:
           spassgit: esrocos/tools-kul-gen_cpp
           branch: master
+          
+ - tools/kul/cmm_gen:
+          spassgit: esrocos/tools-kul-cmm_gen
+          branch: master
 
