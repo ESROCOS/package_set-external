@@ -56,4 +56,8 @@ version_control:
  - tools/kul/cmm_gen:
           spassgit: esrocos/tools-kul-cmm_gen
           branch: master
+          
+ - bundles/air/ur5_control:
+          spassgit: esrocos/bundles-air-ur5_control 
+          branch: master
 

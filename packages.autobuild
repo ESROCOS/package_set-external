@@ -112,7 +112,10 @@ import_package "control/bip/watchdog_timeout"
 
 import_package "tools/kul/cmm_gen"
 
-
+cmake_package "bundles/air/ur5_control" do |pkg|
+  pkg.define("CMAKE_BUILD_TYPE","Debug")
+  Esrocos.set_taste_package(pkg)
+end
 
 
 
