@@ -74,7 +74,7 @@ end
 
 #import_package "external/luarocks" do |pkg|
  #  Add dependencies
-#  pkg.depends_on "lua5.2"
+#   pkg.depends_on "lua5.2"
 #  system("./configure --lua-version=5.2")
 #  system("make")
 #  system("sudo make install")
@@ -95,16 +95,21 @@ cmake_package "bundles/cmm_control_simple" do |pkg|
   Esrocos.set_taste_package(pkg)
 end
 
-import_package "tools/ilk_compiler" do |pkg|
-#    system("cd bakend/eigen/")
-#    system("mkdir build")
-#    system("cd build")
-#    system("cmake ..")
-#    system("make"
-#    system("sudo make install")
+#import_package("tools/ilk_compiler")
+cmake_package ("tools/ilk_compiler") do |pkg|
+    pkg.builddir = "backend/eigen/build"
 end
 
-import_package "tools/kul/gen_cpp"
+import_package "tools/kul/gen_cpp" do |pkg|
+    def pkg.prepare 
+        super
+        system ("cd ${AUTOPROJ_CURRENT_ROOT}/tools/kul/gen_cpp;make")
+    end
+    def pkg.install 
+        super
+        system ("cp ${AUTOPROJ_CURRENT_ROOT}/tools/kul/gen_cpp/libur5.so ${AUTOPROJ_CURRENT_ROOT}/install/lib/")
+    end
+end
 
 import_package "control/bip/monitor_joints"
 
