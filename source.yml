@@ -15,4 +15,4 @@ version_control:
           archive_dir: opencv-2.4.13
  - external/aruco:
           type: archive
-          url: http://sourceforge.net/projects/aruco/files/OldVersions/aruco-1.2.5.tgz
+          url: https://sourceforge.net/projects/aruco/files/OldVersions/aruco-1.3.0.tgz
