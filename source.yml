@@ -13,6 +13,6 @@ version_control:
           url: https://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/2.4.13/opencv-2.4.13.zip
           update_cached_file: false
           archive_dir: opencv-2.4.13
-- external/aruco:
-      type: archive
-      url: http://sourceforge.net/projects/aruco/files/OldVersions/aruco-1.2.5.tgz
+ - external/aruco:
+          type: archive
+          url: http://sourceforge.net/projects/aruco/files/OldVersions/aruco-1.2.5.tgz
