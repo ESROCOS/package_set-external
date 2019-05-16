@@ -7,3 +7,7 @@ cmake_package "external/opencv2-4-13" do |pkg|
   pkg.define("CMAKE_BUILD_TYPE","Release")
   pkg.define("ENABLE_PRECOMPILED_HEADERS","OFF")
 end
+
+cmake_package 'external/aruco' do |pkg|
+        pkg.depends_on 'opencv'
+end
