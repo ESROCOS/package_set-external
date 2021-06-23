@@ -13,8 +13,8 @@ version_control:
           url: https://sourceforge.net/projects/aruco/files/OldVersions/aruco-1.3.0.tgz
           
  - tools/i3ds_framework:
-     github: I3DS/i3ds-framework-cpp
-     branch: master
+     gmvgit: PERASPERA/ADE/i3ds-framework-cpp
+     branch: mosar
 
  - tools/i3ds_interfaces:
      gmvgit: PERASPERA/ADE/i3ds-interfaces
