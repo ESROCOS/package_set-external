@@ -17,5 +17,5 @@ version_control:
      branch: master
 
  - tools/i3ds_interfaces:
-     github: I3DS/i3ds-interfaces
-     branch: master
+     gmvgit: PERASPERA/ADE/i3ds-interfaces
+     branch: with-generated

@@ -13,6 +13,9 @@ esrocos_package "tools/i3ds_framework" do |pkg|
     pkg.define("GENERATE_ASN", "OFF")
 end
 
-cmake_package "tools/i3ds_interfaces" do |pkg|
-   pkg.define("BUILD_ASN1CC", "${HOME}/tool-inst/share/asn1scc/Asn1f4.exe")
+esrocos_package "tools/i3ds_interfaces" do |pkg|
+   #pkg.define("BUILD_ASN1CC", File.join(ENV['HOME'], 'tool-inst', 'share', 'asn1scc', 'Asn1f4.exe'))
+   #pkg.define("CMAKE_INSTALL_LIBDIR", File.join(ENV['AUTOPROJ_CURRENT_ROOT'], 'install', 'lib'))
+   #pkg.define("CMAKE_INSTALL_INCLUDEDIR", File.join(ENV['AUTOPROJ_CURRENT_ROOT'], 'install', 'include'))
+   pkg.depends_on 'rename'
 end
