@@ -14,5 +14,5 @@ esrocos_package "tools/i3ds_framework" do |pkg|
 end
 
 cmake_package "tools/i3ds_interfaces" do |pkg|
-   pkg.define ('BUILD_ASN1CC', '${HOME}/tool-inst/share/asn1scc/Asn1f4.exe')
+   pkg.define ("BUILD_ASN1CC", "${HOME}/tool-inst/share/asn1scc/Asn1f4.exe")
 end
