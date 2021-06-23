@@ -11,3 +11,11 @@ version_control:
  - external/aruco:
           type: archive
           url: https://sourceforge.net/projects/aruco/files/OldVersions/aruco-1.3.0.tgz
+          
+ - tools/i3ds_framework:
+     github: I3DS/i3ds-framework-cpp
+     branch: master
+
+ - tools/i3ds_interfaces:
+     github: I3DS/i3ds-interfaces
+     branch: master
