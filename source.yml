@@ -2,7 +2,7 @@ name: esrocos.external
 
 version_control:
 
- - external/static_opencv:
+ - external/opencv:
           type: archive
           url: https://downloads.sourceforge.net/project/opencvlibrary/opencv-unix/3.3.0/opencv-3.3.0.zip
           update_cached_file: false
@@ -13,8 +13,8 @@ version_control:
           url: https://sourceforge.net/projects/aruco/files/OldVersions/aruco-1.3.0.tgz
           
  - tools/i3ds_framework:
-     gmvgit: PERASPERA/ADE/i3ds-framework-cpp
-     branch: mosar
+     github: I3DS/i3ds-framework-cpp
+     branch: master
 
  - tools/i3ds_interfaces:
      gmvgit: PERASPERA/ADE/i3ds-interfaces
