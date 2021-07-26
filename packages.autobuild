@@ -15,9 +15,6 @@ esrocos_package "tools/i3ds_framework" do |pkg|
 end
 
 esrocos_package "tools/i3ds_interfaces" do |pkg|
-   #pkg.define("BUILD_ASN1CC", File.join(ENV['HOME'], 'tool-inst', 'share', 'asn1scc', 'asn1.exe'))
-   #pkg.define("CMAKE_INSTALL_LIBDIR", File.join(ENV['AUTOPROJ_CURRENT_ROOT'], 'install', 'lib'))
-   #pkg.define("CMAKE_INSTALL_INCLUDEDIR", File.join(ENV['AUTOPROJ_CURRENT_ROOT'], 'install', 'include'))
    pkg.define("BUILD_DEBUG", "OFF")
    pkg.depends_on 'rename'
 end

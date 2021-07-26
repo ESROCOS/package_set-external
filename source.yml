@@ -17,5 +17,9 @@ version_control:
      branch: master
 
  - tools/i3ds_interfaces:
-     gmvgit: PERASPERA/ADE/i3ds-interfaces
-     branch: with-generated
+     type: git
+     github: I3DS/i3ds-interfaces
+     branch: master
+     commit: ae75e8dcbd664cafa594380bb4804b0459568d45
+     patches: 
+      - [$AUTOPROJ_SOURCE_DIR/patches/i3ds-interfaces-esrocos.patch, 1]
