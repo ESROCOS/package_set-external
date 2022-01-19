@@ -1,0 +1,12 @@
+diff -ruN opencv/modules/python/src2/cv2.cpp opencvnew/modules/python/src2/cv2.cpp
+--- opencv/modules/python/src2/cv2.cpp	2017-08-04 00:58:23.000000000 +0100
++++ opencvnew/modules/python/src2/cv2.cpp	2022-01-19 15:29:57.070478364 +0000
+@@ -851,7 +851,7 @@
+     (void)name;
+     if(!obj || obj == Py_None)
+         return true;
+-    char* str = PyString_AsString(obj);
++    const char* str = PyString_AsString(obj);
+     if(!str)
+         return false;
+     value = String(str);

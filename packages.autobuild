@@ -1,4 +1,5 @@
 cmake_package "external/opencv" do |pkg|
+  pkg.depends_on 'gtk2.0'
   pkg.define("CMAKE_BUILD_TYPE","Release")
   #pkg.define("BUILD_SHARED_LIBS","OFF")
 end
