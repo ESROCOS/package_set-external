@@ -16,6 +16,7 @@ version_control:
           
  - tools/i3ds_framework:
      github: I3DS/i3ds-framework-cpp
+     commit: b80b7224475af484dfc54a175146eb1891088525
      branch: master
 
  - tools/i3ds_interfaces:
